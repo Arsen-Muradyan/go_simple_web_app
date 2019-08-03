@@ -1,0 +1,9 @@
+{{ template "header" }}
+
+<h2>Add Post</h2>
+<form action="/posts/create" method="POST">
+  <input type="text" name="title">
+  <textarea name="body" class="materialize-textarea"></textarea>
+  <input type="submit" value="Add Post" class="btn">
+</form>
+{{ template "footer" }}

@@ -1,0 +1,8 @@
+{{ template "header" }}
+  <h3>{{ .post.title }}</h3>
+  <p>{{ .post.body }}</p>
+  <form action="/posts/{{ .key }}" method="POST" class="left">
+    <input type="submit" value="DELETE" class="btn red" onclick="return confirm('Are You Sure?')">
+  </form>
+  <a href="/posts/{{ .key }}/edit" class="btn right">Edit</a>
+{{ template "footer" }}

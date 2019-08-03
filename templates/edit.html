@@ -1,0 +1,8 @@
+{{ template "header" }}
+  <h3>Edit {{ .post.title }}</h3>
+  <form action="/posts/{{ .key }}/update" method="POST">
+    <input type="text" value="{{ .post.title }}" name="title">
+    <textarea name="body" class="materialize-textarea">{{ .post.body }}</textarea>
+    <input type="submit" class="btn" value="Update Post">
+  </form>
+{{ template "footer" }}

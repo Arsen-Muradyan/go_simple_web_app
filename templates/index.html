@@ -1,0 +1,11 @@
+{{ template "header" }}
+  {{ if gt (len .) 0 }}
+  <div class="collection">
+      {{ range $key, $val := . }}
+        <a href="/posts/{{ $key }}" class="collection-item">{{ $val.title }}</a>
+      {{ end }}
+    </div>
+  {{ else }}
+    <span>No Post Found</span>
+  {{ end }}
+{{ template "footer" }}
